@@ -37,6 +37,7 @@ $flash = getFlash();
                     <a href="/ecommerce/seller/dashboard.php">Dashboard</a>
                     <a href="/ecommerce/seller/products.php">My Products</a>
                     <a href="/ecommerce/seller/orders.php">Orders</a>
+                    <a href="/ecommerce/seller/profile.php">My Profile</a>
                 <?php elseif ($user['role'] === 'customer'): ?>
                     <a href="/ecommerce/customer/shop.php">Shop</a>
                     <a href="/ecommerce/customer/cart.php">Cart
@@ -47,8 +48,10 @@ $flash = getFlash();
                         ?>
                     </a>
                     <a href="/ecommerce/customer/orders.php">My Orders</a>
+                    <a href="/ecommerce/customer/profile.php">My Profile</a>
                 <?php elseif ($user['role'] === 'delivery'): ?>
                     <a href="/ecommerce/delivery/dashboard.php">My Deliveries</a>
+                    <a href="/ecommerce/delivery/profile.php">My Profile</a>
                 <?php endif; ?>
                 <span class="nav-user">Hi, <?= escape($user['name']) ?></span>
                 <a href="/ecommerce/auth/logout.php" class="btn-nav-outline">Logout</a>
